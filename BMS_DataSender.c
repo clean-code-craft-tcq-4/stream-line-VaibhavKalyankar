@@ -7,7 +7,7 @@ void PrintBatteryData(float BatteryTemp,float BatterySoc)
   printf("Temprature: = %f - Soc: = %f\n",BatteryTemp,BatterySoc);
 }
 
-DataStatus_en GenerateSensorData(SensorDta_st *SensorData,int DataSize)
+DataStatus_en GenerateSensorData(SensorData_st *SensorData,int DataSize)
 {
   DataStatus_en FinalStatus = DATA_GENERATION_FAILED;
   
@@ -34,7 +34,7 @@ DataStatus_en SendBatteryParametersa(SensorDta_st *SensorData,int DataSize)
   
   if(SensorData != NULL)
   {
-    FinalStatus = GenerateSensorData(SensorData,DataSize);
+    FinalStatus = GenerateSensorData(SensorData_st,DataSize);
     if(FinalStatus)
     {
       
