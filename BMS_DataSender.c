@@ -8,12 +8,16 @@ DataStatus_en GenerateSensorData(SensorDta_st *SensorData,int DataSize)
   {
     FinalStatus = DATA_GENERATION_OK;
     
-    for(int Count=0;Count < DataSize;Count++
-        {
-          
-        }
+    for(int Count=0;Count<DataSize;Count++)
+    {
+          SensorData->Temprature[Count] = rand()%TEMP_RANGE;
+          SensorData->Soc[Count] = rand()%SOC_RANGE;
+    }
   
-        }
+  }
+  
+  return(FinalStatus);
+}
     
 
 DataStatus_en SendBatteryParametersa(SensorDta_st *SensorData,int DataSize)
