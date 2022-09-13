@@ -3,7 +3,7 @@
 
 void TEST_CASE_01()
 {
-  SendBatteryParameters(50,NULL);
+  SendBatteryParameters(NULL,50);
   
 }
 int main()
