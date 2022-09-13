@@ -1,6 +1,22 @@
 #include<stdio.h>
 
-DataStatus_en SendBatteryParameters(SensorData_st *SensorData,int DataSize)
+DataStatus_en GenerateSensorData(SensorDta_st *SensorData,int DataSize)
+{
+  DataStatus_en FinalStatus = DATA_GENERATION_FAILED;
+  
+  if((SensorData != NULL) && (DataSize))
+  {
+    FinalStatus = DATA_GENERATION_OK;
+    
+    for(int Count=0;Count < DataSize;Count++
+        {
+          
+        }
+  
+        }
+    
+
+DataStatus_en SendBatteryParametersa(SensorDta_st *SensorData,int DataSize)
 {
   DataStatus_en FinalStatus = DATA_SENDING_FAILED ;
   
