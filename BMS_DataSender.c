@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include "BMS_DataSender.h"
 
+void PrintBatteryData(float BatteryTemp,float BatterySoc)
+{
+  printf("Temprature: = %f - Soc: = %f\n",BatteryTemp,BatterySoc);
+}
+
 DataStatus_en GenerateSensorData(SensorDta_st *SensorData,int DataSize)
 {
   DataStatus_en FinalStatus = DATA_GENERATION_FAILED;
@@ -14,6 +19,7 @@ DataStatus_en GenerateSensorData(SensorDta_st *SensorData,int DataSize)
     {
           SensorData->Temprature[Count] = rand()%TEMP_RANGE;
           SensorData->Soc[Count] = rand()%SOC_RANGE;
+          PrintBatteryData(SensorData->Temprature[Count],SensorData->Soc[Count]);
     }
   
   }
@@ -31,7 +37,7 @@ DataStatus_en SendBatteryParametersa(SensorDta_st *SensorData,int DataSize)
     FinalStatus = GenerateSensorData(SensorData,DataSize);
     if(FinalStatus)
     {
-      PrintBatteryData(SensorData,DataSize);
+      
       FinalStatus = DATA_SENDING_OK;
     }
   }
