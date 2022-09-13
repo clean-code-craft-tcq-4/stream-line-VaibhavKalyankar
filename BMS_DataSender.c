@@ -1,4 +1,6 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "BMS_DataSender.h"
 
 DataStatus_en GenerateSensorData(SensorDta_st *SensorData,int DataSize)
 {
