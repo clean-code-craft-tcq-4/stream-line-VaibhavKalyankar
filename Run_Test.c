@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "BMS_DataSender.h"
+#include <assert.h>
+#include <stdlib.h>
 
 void TEST_CASE_01()
 {
