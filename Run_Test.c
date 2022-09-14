@@ -5,7 +5,8 @@
 
 void TEST_CASE_01()
 {
-  assert(SendBatteryParameters(NULL,50) == DATA_SENDING_FAILED);
+  SensorData_st test_01;
+  assert(SendBatteryParameters(&test_01,50) == DATA_SENDING_FAILED);
   
 }
 int main()
