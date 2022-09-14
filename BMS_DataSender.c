@@ -28,7 +28,7 @@ DataStatus_en GenerateSensorData(SensorData_st *SensorData,int DataSize)
 }
     
 
-DataStatus_en SendBatteryParameters(SensorDta_st *SensorData,int DataSize)
+DataStatus_en SendBatteryParameters(SensorData_st *SensorData,int DataSize)
 {
   DataStatus_en FinalStatus = DATA_SENDING_FAILED ;
   
