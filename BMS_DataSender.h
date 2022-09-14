@@ -17,7 +17,7 @@ typedef enum
 }DataStatus_en;
 
 DataStatus_en SendBatteryParameters(SensorData_st ,int);
-SensorData_st GenerateSensorData(SensorData_st ,int);
+DataStatus_en GenerateSensorData(SensorData_st ,int);
 void PrintBatteryData(float,float);
 
   
