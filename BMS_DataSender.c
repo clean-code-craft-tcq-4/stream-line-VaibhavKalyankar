@@ -34,7 +34,7 @@ DataStatus_en SendBatteryParameters(SensorData_st *SensorData,int DataSize)
   
   if(SensorData != NULL)
   {
-    FinalStatus = GenerateSensorData(SensorData_st,DataSize);
+    FinalStatus = GenerateSensorData(SensorData,DataSize);
     if(FinalStatus)
     {
       
