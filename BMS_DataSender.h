@@ -16,8 +16,8 @@ typedef enum
   DATA_SENDING_OK
 }DataStatus_en;
 
-DataStatus_en SendBatteryParameters(SensorData_st ,int);
-DataStatus_en GenerateSensorData(SensorData_st ,int);
+DataStatus_en SendBatteryParameters(SensorData_st *SensorData ,int);
+DataStatus_en GenerateSensorData(SensorData_st *SensorData ,int);
 void PrintBatteryData(float,float);
 
   
